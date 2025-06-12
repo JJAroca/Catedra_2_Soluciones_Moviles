@@ -12,9 +12,14 @@ app.use(express.json());
 
 // Importar rutas
 const authRoutes = require('./routes/auth');
+const bookRoutes = require('./routes/books');
+const loanRoutes = require('./routes/loans');
 
 // Usar rutas
-app.use('/', authRoutes); // O usa '/api' o '/auth' si prefieres prefijo
+
+app.use('/api/auth', authRoutes);
+app.use('/api/books', bookRoutes);
+app.use('/api/loans', loanRoutes);
 
 // Ruta de prueba
 app.get('/', (req, res) => {
