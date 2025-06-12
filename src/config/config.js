@@ -1,0 +1,16 @@
+module.exports =
+{
+  "development": {
+    "dialect": "sqlite",
+    "storage": "./biblioteca.db",
+    "logging": false
+  },
+  "test": {
+    "dialect": "sqlite",
+    "storage": ":memory:"
+  },
+  "production": {
+    "dialect": "sqlite",
+    "storage": "./biblioteca.db"
+  }
+}
